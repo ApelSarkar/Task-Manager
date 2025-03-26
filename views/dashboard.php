@@ -153,7 +153,6 @@ $tasks = $task->getTasks($_SESSION['user_id']);
             .then(data => {
                 const messageDiv = document.getElementById("message");
                 if (data.success) {
-                    console.log(data);
                     messageDiv.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
                     let taskStatusHtml = '';
                     if (data.task.status !== 'completed') {
