@@ -77,8 +77,8 @@ class TaskController
     {
         $task = $this->taskModel->getTasksById((int)$taskId);
         $description = $task['description'];
-        $accessToken = ''; // Replace with your actual token
-        $pageId = ''; // Replace with your Page ID
+        $accessToken =$_ENV['your access token']; // Replace with your actual token
+        $pageId =$_ENV['your_facebook_page_id']; // Replace with your Page ID
 
         $url = "https://graph.facebook.com/v22.0/{$pageId}/feed";
         $data = [
